@@ -83,6 +83,10 @@ def startSrsLTExPSSProcess(cmdprog):
                         commandstring.append("-a")
                         commandstring.append(mKB.config['device_args'])
                 p = subprocess.run(commandstring)
+                if band == bands[-1]:
+                   state = False
+                   cells = kb.data['SM_cells']
+                   saveCells(cells)	
         except (KeyboardInterrupt, SystemExit):
             state = False
             cells = kb.data['SM_cells']
