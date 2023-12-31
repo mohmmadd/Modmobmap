@@ -78,6 +78,8 @@ make
 sudo make install
 sudo ldconfig -i
 cd ..
+sudo apt-get install libsndfile1-dev
+
 
 echo "[+] Installing gr-osmosdr from source"
 mkdir thirdparty
